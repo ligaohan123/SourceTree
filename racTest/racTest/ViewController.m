@@ -52,19 +52,16 @@
     [connect.signal subscribeNext:^(id x) {
         NSLog(@"%@",x);
     }];
-    [connect.signal subscribeNext:^(id x) {
-        NSLog(@"%@",x);
-        
-    }];
+    
     [connect connect];
     
  
     //延时方法 可用来检测更新
-//    [[RACSignal interval:3 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
-//        NSLog(@"吃药");
-//    }];
-//    
-//    __block NSInteger a = 0;
+    [[RACSignal interval:3 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+        NSLog(@"吃药");
+    }];
+    
+    __block NSInteger a = 0;
     
     //retry 多次执行
     
