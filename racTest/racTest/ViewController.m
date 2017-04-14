@@ -38,7 +38,7 @@
     
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
-        [subscriber sendNext:@"fdaf"];
+        [subscriber sendNext:@"测试 racMUL"];
         [subscriber sendCompleted];
         return [RACDisposable disposableWithBlock:^{
             
